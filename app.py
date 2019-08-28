@@ -8,7 +8,7 @@ import pandas as pd
 
 tabtitle = 'DC Housing'
 myheading='Analysis of housing prices in Washington DC'
-neighborhood='Columbia Heights'
+neighborhood='Petworth'
 color1='#04F9E6'
 color2='#1B03B1'
 sourceurl = 'https://www.kaggle.com/christophercorrea/dc-residential-properties/'
@@ -24,14 +24,14 @@ df=df[df['BEDRM']<8]
 
 ########### Set up the chart
 trace = go.Scatter(
-    x = df['PRICE'],
-    y = df['LIVING_GBA'],
+    x = df['LIVING_GBA],
+    y = df['PRICE'],
     mode = 'markers',
     marker=dict(
         size=8,
-        color = df['BEDRM'], # set color equal to a third variable
+        color = df['BATHRM'], # set color equal to a third variable
         colorscale=[color1, color2],
-        colorbar=dict(title='Bedrooms'),
+        colorbar=dict(title='Bathrooms'),
         showscale=True
     )
 )
