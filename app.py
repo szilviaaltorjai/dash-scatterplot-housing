@@ -24,7 +24,7 @@ df=df[df['BEDRM']<8]
 
 ########### Set up the chart
 trace = go.Scatter(
-    x = df['LIVING_GBA],
+    x = df['LIVING_GBA'],
     y = df['PRICE'],
     mode = 'markers',
     marker=dict(
